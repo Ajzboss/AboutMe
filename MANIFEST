@@ -5,9 +5,9 @@ CHOICES
  which one you chose using the letter provided in the spec. Separate the letters with a comma
  In some cases you will also need to tell us what you did)
 -------
-9a.
-9b.
-12.
+9a. Added Black to white gradient in the nav bar text
+9b. Added clamp to all text in the document, but mainly to the header title and subtitle
+12. Applied a 70/30 linear gradient towards a corner for the Who Am I? card
 18.
 19.
 

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="color-scheme" content="light only">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Aryan Janolkar's personal site. Here you can find my blog, achievements, and projects.">
+    <title>Personal Site</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js"></script> <!-- JavaScript -->
+</head>
+<nav>
+    <ul>
+        <span class="selectable"><a href="#about-block">Home</a></span>
+        <span class="selectable"><a href="#achievements-block">Achievements</a></span>
+        <span class="selectable"><a href="#blog-block">Blog</a></span>
+        <span class="selectable"><a href="#projects-block">Projects</a></span>
+        <span class="selectable"><a href="#contact-block">Contact</a></span>
+        <span class="selectable" id="dark-mode-toggle">Dark Mode</a></span>
+    </ul>
+</nav>
+<body>
+    <header>
+        <h1 class="title-text">       
+            Hi! I'm Aryan Janolkar. Welcome to my personal site!
+        </h1>
+        <h2 class="subtitle-text">
+            I'm a computer science student who loves fullstack development, machine learning, and open source.<br>
+            I blog and post achievements (like my hip hop dance!). here.
+        </h2>
+    </header>
+
+
+    <main>
+        <section id="about-block">
+            <div>
+                <h2 class="sub-heading">Who Am I?</h2>
+                <h3>I'm a computer science student who fell in love with:</h3>
+                <span class="selectable">Fullstack Development</span>
+                <span class="selectable">Machine Learning</span>
+                <span class="selectable">Hip Hop Dance</span>
+                <span class="selectable">Open Source</span>
+                <a href="dnd.html"><span class="selectable"> Dungeons And Dragons </span></a>
+                <span class="selectable">Game Development</span>
+            </div>
+               <img src="./aryan.jpg" alt="Aryan Janolkar" class="profile-pic"/>
+        </section>
+        <section id="achievements-block">
+            <h2 class="sub-heading">What Am I Most Proud Of?</h2>
+            <div class="achievements">
+                <h3>Professional Achievements</h3>
+                <p>Here are some of my achievements:</p>
+                <ul>
+                    <!-- Machine Learning Engineering Intern -->
+                    <li>
+                      <strong>Machine Learning Engineering Intern</strong>
+                      <span>June 2024 - September 2024</span>
+                      <ul>
+                        <li>  Created Graph Neural Network that automatically identifies fraud among 1,000,000+ credit card applications</li>
+                        <li>  Developed NoSQL Neo4j ETL job to query 8.2 billion data points from Hadoop Cluster, 100x faster than SQL solution</li>
+                        <li>  Designed and implemented a modular ML pipeline with integrated testbed, PySpark pre-processing, data visualization, and containerization</li>
+                        <li>  Integrated WandB/Ray hyperparameter tuning/logging, and complex pre/post-processing systems, improving accuracy by 25%</li>
+                        <li>  Incorporated distributed training, parallelization, and CUDA integration into training loop, causing 30x speedup</li>
+                      </ul>
+                    </li>
+                  
+                    <!-- Machine Learning Researcher -->
+                    <li>
+                      <strong>Machine Learning Researcher</strong>
+                      <span>May 2023 - May 2024</span>
+                      <ul>
+                        <li>Authored paper proving diffusion models tend to memorize outliers late for ICLR Austria</li>
+                      </ul>
+                    </li>
+                  
+                    <!-- Data Engineer Intern -->
+                    <li>
+                      <strong>Data Engineer Intern</strong>
+                      <span>May 2023 - September 2023</span>
+                      <ul>
+                        <li>Developed multi-modal ensemble classifier (1D CNN, RNN, Transformer) with 80% accuracy</li>
+                      </ul>
+                    </li>
+                  
+                    <!-- Software Engineer Intern -->
+                    <li>
+                      <strong>Software Engineer Intern - Project Head</strong>
+                      <span>November 2019 - September 2022</span>
+                      <ul>
+                        <li>Spearheaded 4-developer team to build networking website for 600+ NGOs, increasing traffic by 130%</li>
+                      </ul>
+                    </li>
+                  
+                    <!-- AI Team Lead -->
+                    <li>
+                      <strong>Artificial Intelligence Team Lead</strong>
+                      <span>September 2023 - December 2023</span>
+                      <ul>
+                        <li>Collaborated on transformer model architecture design for RNA structure prediction</li>
+                      </ul>
+                    </li>
+                  </ul>
+                  
+            </div>
+        </section>
+        <section id="blog-block">
+            <h2 class="sub-heading">My Blog</h2>
+            <p>Here are some of my blog posts:</p>       
+            <div class="blog">
+                    <div class="blog-post">
+                    <span><a href="./dnd.html" class="selectable">Starting Your First DnD Campaign</a></span>
+                    <span>How I learned fullstack development</span>
+                    <span>My journey in machine learning</span>
+                    <span>Tips for open source contributions</span>
+                    <span>Game development tutorials</span>
+                </ul>
+            </div>
+        </section>
+        <section id="projects-block">
+            <h2 class="sub-heading">My Personal Projects</h2>
+            <p>Here are Some Of My Projects:</p>
+            <div class="projects">
+                <span>Project 1:  Stanford Ribonanza RNA Folding AI</span>
+                <span>Project 2: Description</span>
+                <span>Project 3: Description</span>
+                <span>Project 4: Description</span>
+            </div>
+            <div class="skills">
+                <h3>My Skills</h3>
+                <p>List your skills here. For example:</p>
+                <ul>
+                    <span>HTML, CSS, JavaScript</span>
+                    <span>Python, Java</span>
+                    <span>React, Node.js</span>
+                    <span>Machine Learning with Python</span>
+                </ul>
+            </div>
+
+        <section id="contact-block">
+            <h2 class="sub-heading">Contact Me!</h2>
+            <p>If you want to reach out, feel free to contact me through:</p>
+            <div class="contact-methods">
+                <span>Email</span>
+                <span>LinkedIn</span>
+                <span>GitHub</span> 
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Aryan Janolkar. All rights reserved.</p>
+    </footer>
+</body>
+</html>

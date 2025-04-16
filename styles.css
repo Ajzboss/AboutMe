@@ -1,0 +1,225 @@
+/* General Styles */
+:root {
+    /* Light Mode */
+    --background: #ffffff;
+    --header-background: #333333;
+    --nav-background: #333333;
+    --header-text: #999898;
+    --nav-text: #ffffff;
+    --footer-background: #333333;
+    --footer-text: #ffffff; /* Added for clarity */
+    --table-background: #D3D3D3;
+    --card-background: #f9f9f9;
+  }
+  
+  .dark-mode {
+      /* Dark Mode */
+      --background: #333;       /* Dark background */
+      --text: #fff;           /* Light text */
+      --header-background: #fff; /* Dark header */
+      --header-text: #333;       /* Light text */
+      --nav-background: #fff;    /* Dark nav */
+      --nav-text: #333;          /* Light text */
+      --footer-background: #fff; /* Dark footer */
+      --footer-text: #333;       /* Light text */
+      --table-background: #333;  /* Dark table */
+    }
+
+  a{
+    color: var(--text); /* Ensure links use variable */
+    text-decoration: none;
+    
+  }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: var(--background); /* Ensure body uses variable */
+    color: var(--text); /* Ensure body uses variable */
+    font-size: clamp(8px, 3vw, 16px);
+    
+  }
+  
+  
+  header {
+    background: var(--header-background); /* Added */
+    color: var(--header-text);
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  header > * {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: oblique;
+  }
+  
+  header > h1.title-text {
+    font-size: clamp(12px, 3vw, 32px);
+  }
+  header h2.subtitle-text {
+    text-align: center;
+    font-size: clamp(10px, 1vw, 15px);
+  }
+
+    header h1.title-text span {
+        font-size: clamp(12px, 3vw, 32px);
+        font-weight: 900;
+        font-style: oblique;
+        color: var(--header-text);
+    }
+  
+  header h1 {
+    margin: 0;
+  }
+  /* Nav Stuff */
+  
+  nav {
+    position: sticky;
+    padding-left: 1rem;
+    top: 0;
+    z-index: 100;
+    background-color: var(--nav-background);
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+    
+  nav ul span {
+    color: var(--nav-text);
+    text-decoration: none;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-right: 15px;
+    cursor: pointer;
+  }
+
+  nav .selectable:hover {
+    text-decoration:wavy;
+    box-shadow: 0 0 4px var(--background); 
+    transition: box-shadow 0.5s ease;
+}
+  nav .selectable:active {
+    background: var(--background);
+    transition: background-color 0.5s ease;
+  }
+
+  
+  main .selectable:hover {
+    text-decoration:wavy;
+    box-shadow: 0 0 4px var(--header-background); 
+    transition: box-shadow 0.5s ease;
+}
+  main .selectable:active {
+    background: var(--header-background);
+    transition: background-color 0.5s ease;
+  }
+  ul li:not(:has(ul)) {
+    list-style-type: square;
+  }
+
+  /* Main Body */
+  main {
+    padding: 2rem;
+  }
+  
+  section {
+    margin-bottom: 2rem;
+  }
+  
+    section h2.sub-heading {
+        font-size: clamp(12px, 3vw, 32px);
+        margin-bottom: 1rem;
+    }
+
+    #about-block {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content:center;
+        flex-wrap: wrap;        
+        gap: 10%; 
+        border : 2px solid var(--header-background); /* Adjust the border style as needed */
+        padding: 1rem;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+        background: var(--card-background);
+    }
+    #about-block > div {
+        flex: 1 1 300px; /* Flex-grow, flex-shrink, and base width */
+        text-align: center;
+        border: 1px solid var(--header-background);
+        border-radius: 8px;
+        background:linear-gradient(to bottom right,var(--background) 70%, var(--nav-background) 100%);  
+        padding: 1rem;
+        margin: 1rem;
+    }
+    #about-block > div span {
+        display: block;
+        font-size: clamp(12px, 3vw, 24px);
+        font-weight: 700;
+        font-style: oblique;
+    }
+    #about-block > img.profile-pic {
+        max-width: 50%; /* Prevents overflow */
+        height: auto;    /* Maintains aspect ratio */
+        justify-self: right;
+        align-self: right;
+    }
+
+    /* Footer Stuff */
+  footer {
+    background-color: var(--footer-background);
+    color: var(--footer-text); /* Changed to dedicated variable */
+    text-align: center;
+    padding: 1rem 0;
+  }
+  
+
+
+
+/* Grid Table */
+.schedule-table {  
+    display: grid;  
+    padding: 1rem;  
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 columns */  
+    grid-template-areas:  
+      'sidebar name type desc'  
+      'sidebar name type desc'  
+      'sidebar name type desc';  
+    gap: 10px;  
+    border-collapse: collapse; /* Essential for table-like borders */
+  }  
+  .schedule-table > * {
+    border: 5px solid var(--header-background); /* Adjust the border style as needed */
+  }
+  
+  .sidebar {  
+    grid-area: sidebar;  
+    background-color: var(--table-background);
+    text-align: center;  
+    font-size: 1.5rem;
+  }  
+  
+  /* Remove the "type" column below 1000px */  
+  @media (max-width: 1000px) {  
+    .schedule-table >.sidebar {  
+      display: none;  
+    }
+    .schedule-table {  
+      grid-template-columns: 1fr 1fr 1fr; /* Now 3 columns */  
+      grid-template-areas:  
+        'name type desc'  
+        'name type desc'  
+        'name type desc';  
+    }  
+  }  
+  
