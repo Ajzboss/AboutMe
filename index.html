@@ -13,17 +13,17 @@
     <link rel="stylesheet" href="styles.css">
     <script src="app.js"></script> <!-- JavaScript -->
 </head>
+<body>
 <nav>
-    <ul>
+    <div>
         <span class="selectable"><a href="#about-block">Home</a></span>
         <span class="selectable"><a href="#achievements-block">Achievements</a></span>
         <span class="selectable"><a href="#blog-block">Blog</a></span>
         <span class="selectable"><a href="#projects-block">Projects</a></span>
         <span class="selectable"><a href="#contact-block">Contact</a></span>
-        <span class="selectable" id="dark-mode-toggle">Dark Mode</a></span>
-    </ul>
+        <span class="selectable" id="dark-mode-toggle">Dark Mode</span>
+        </div>
 </nav>
-<body>
     <header>
         <h1 class="title-text">       
             Hi! I'm Aryan Janolkar. Welcome to my personal site!
@@ -33,21 +33,19 @@
             I blog and post achievements (like my hip hop dance!). here.
         </h2>
     </header>
-
-
     <main>
         <section id="about-block">
             <div>
                 <h2 class="sub-heading">Who Am I?</h2>
                 <h3>I'm a computer science student who fell in love with:</h3>
-                <span class="selectable">Fullstack Development</span>
-                <span class="selectable">Machine Learning</span>
-                <span class="selectable">Hip Hop Dance</span>
-                <span class="selectable">Open Source</span>
+                <!-- <a href="index.html"><span class="selectable">Fullstack Development</span> </a>
+                <a href="index.html"><span class="selectable">Machine Learning</span></a>
+                <a href="index.html"><span class="selectable">Hip Hop Dance</span></a>
+                <a href="index.html"><span class="selectable">Open Source</span></a> -->
                 <a href="dnd.html"><span class="selectable"> Dungeons And Dragons </span></a>
-                <span class="selectable">Game Development</span>
+                <a href="index.html"><span class="selectable">Game Development</span></a>
             </div>
-               <img src="./aryan.jpg" alt="Aryan Janolkar" class="profile-pic"/>
+               <img src="./aryan.jpg" alt="Aryan Janolkar" class="profile-pic">
         </section>
         <section id="achievements-block">
             <h2 class="sub-heading">What Am I Most Proud Of?</h2>
@@ -110,15 +108,64 @@
         <section id="blog-block">
             <h2 class="sub-heading">My Blog</h2>
             <p>Here are some of my blog posts:</p>       
-            <div class="blog">
-                    <div class="blog-post">
-                    <span><a href="./dnd.html" class="selectable">Starting Your First DnD Campaign</a></span>
-                    <span>How I learned fullstack development</span>
-                    <span>My journey in machine learning</span>
-                    <span>Tips for open source contributions</span>
-                    <span>Game development tutorials</span>
-                </ul>
+            <div class="card-block vert">
+                <a href="./dnd.html">
+                    <div class="selectable">
+                            Starting Your First DnD Campaign
+                    </div>
+                </a>
+                    <div class="selectable">How I learned fullstack development</div>
+                    <div class="selectable">My journey in machine learning</div>
+                    <div class="selectable">Tips for open source contributions</div>
+                    <div class="selectable">Game development tutorials</div>
             </div>
+        </section>
+        <section id="courses">
+            <h2 class="sub-heading">Courses I've Taken</h2>
+            <div class="card-block">
+                <div class="selectable">Operating Systems
+                    <div class="card-content">
+                        <p>Course Description: This course covers the fundamentals of operating systems, including process management, memory management, and file systems.</p>
+                    </div>
+                </div>
+                <div class="selectable">Computer Networking
+                    <div class="card-content">
+                        <p>Course Description: This course covers the principles of computer networking, including protocols, architectures, and security.</p>
+                    </div>
+                </div>
+                <div class="selectable">Artificial Intelligence And Deep Learning
+                    <div class="card-content">
+                        <p>Course Description: This course covers the fundamentals of artificial intelligence and deep learning, including neural networks and natural language processing.</p>
+                    </div>
+                </div>
+                <div class="selectable">Distributed Systems
+                    <div class="card-content">
+                        <p>Course Description: This course covers the principles of distributed systems, including consistency, fault tolerance, and scalability.</p>
+                    </div>
+                </div>
+                <div class="selectable">Data Structures And Algorithms
+                    <div class="card-content">
+                        <p>Course Description: This course covers the fundamentals of data structures and algorithms, including arrays, linked lists, trees, and sorting algorithms.</p>
+                    </div>
+                </div>
+                <div class="selectable">Applied Numerical Computation
+                    <div class="card-content">
+                        <p>Course Description: This course covers the principles of numerical computation, including numerical methods and optimization techniques.</p>
+                    </div>
+                </div>
+                <div class="selectable">Software Engineering
+                    <div class="card-content">
+                        <p>Course Description: This course covers the principles of software engineering, including software development methodologies and project management.</p>
+                    </div>
+                </div>
+                <div class="selectable">Natural Language Proccess
+                    <div class="card-content">
+                        <p>Course Description: This course covers the principles of natural language processing, including text analysis and sentiment analysis.</p>
+                    </div>
+                </div>
+
+            </div>
+
         </section>
         <section id="projects-block">
             <h2 class="sub-heading">My Personal Projects</h2>
@@ -132,23 +179,39 @@
             <div class="skills">
                 <h3>My Skills</h3>
                 <p>List your skills here. For example:</p>
-                <ul>
                     <span>HTML, CSS, JavaScript</span>
                     <span>Python, Java</span>
                     <span>React, Node.js</span>
                     <span>Machine Learning with Python</span>
-                </ul>
             </div>
+        </section>
 
         <section id="contact-block">
             <h2 class="sub-heading">Contact Me!</h2>
             <p>If you want to reach out, feel free to contact me through:</p>
             <div class="contact-methods">
-                <span>Email</span>
-                <span>LinkedIn</span>
-                <span>GitHub</span> 
-            </div>
+                <a href="https://www.linkedin.com/in/aryan-janolkar-99b152197/" ><h1 class="selectable">LinkedIn<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                  </svg></h1></a>
+                
+                <a href ="https://github.com/Ajzboss"><h1 class="selectable">GitHub</h1></a>
+                <form id="contact-form">
+                    <h2 class="sub-heading">Contact Form</h2>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required /><br /><br />
+                
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required /><br /><br />
+                
+                    <label for="message">Message:</label><br /> 
+                    <textarea id="message" name="message" rows="4" required></textarea
+                    ><br /><br />      
+                    <button type="submit">Send</button>
+                </form>
+            </div>   
+              </section>
         </section>
+        
     </main>
 
     <footer>

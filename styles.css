@@ -10,7 +10,20 @@
     --footer-text: #ffffff; /* Added for clarity */
     --table-background: #D3D3D3;
     --card-background: #f9f9f9;
+    --visited-text:#666; 
   }
+  /* Transition For any Links */
+  .transition-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s, transform 0.5s;
+  }
+    .transition-out {
+        opacity: 0;
+        transform: translateY(30px);
+        pointer-events: none;
+        transition: opacity 0.5s, transform 0.5s;
+    }
   
   .dark-mode {
       /* Dark Mode */
@@ -23,20 +36,23 @@
       --footer-background: #fff; /* Dark footer */
       --footer-text: #333;       /* Light text */
       --table-background: #333;  /* Dark table */
+      --visited-text:#666;
     }
 
   a{
-    color: var(--text); /* Ensure links use variable */
+    color: var(--text); 
     text-decoration: none;
-    
+    background-color: transparent; /* or a specific color */
+
   }
+  
   body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background: var(--background); /* Ensure body uses variable */
-    color: var(--text); /* Ensure body uses variable */
+    background: var(--background); 
+    color: var(--text); 
     font-size: clamp(8px, 3vw, 16px);
     
   }
@@ -51,7 +67,6 @@
 
   header > * {
     font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 900;
     font-style: oblique;
   }
@@ -84,22 +99,25 @@
     background-color: var(--nav-background);
   }
   
-  nav ul {
+  nav div {
     list-style: none;
     padding: 0;
     margin: 0;
-  }
+}
     
-  nav ul span {
+  nav div span {
     color: var(--nav-text);
     text-decoration: none;
-    background: -webkit-linear-gradient(#eee, #333);
+    background:linear-gradient(#eee, #333);
     -webkit-background-clip: text;
-    background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-right: 15px;
     cursor: pointer;
   }
+
+  .selectable {
+    cursor: pointer;
+}
 
   nav .selectable:hover {
     text-decoration:wavy;
@@ -111,7 +129,6 @@
     transition: background-color 0.5s ease;
   }
 
-  
   main .selectable:hover {
     text-decoration:wavy;
     box-shadow: 0 0 4px var(--header-background); 
@@ -166,15 +183,63 @@
         display: block;
         font-size: clamp(12px, 3vw, 24px);
         font-weight: 700;
-        font-style: oblique;
+        font-style: oblique;   
     }
     #about-block > img.profile-pic {
         max-width: 50%; /* Prevents overflow */
         height: auto;    /* Maintains aspect ratio */
-        justify-self: right;
-        align-self: right;
+        justify-self: flex-end;
+        align-self: flex-end;
     }
 
+
+    .card-block {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content:flex-start;
+        align-items: center;
+    }
+    .card-block.vert{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content:space-evenly;
+        align-items: center;
+        flex-basis: 50%;
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+    .card-block > div , .card-block > a > div  {
+        border: 1px solid var(--header-background);
+        border-radius: 8px;
+        /* background:linear-gradient(to bottom right,var(--background) 70%, var(--nav-background) 100%);   */
+        padding: 1rem;
+        margin: 1rem;
+        font-size: clamp(12px, 3vw, 20px);
+    }
+    .card-block > div >.card-content {
+        /* opacity: 0; */
+        max-height: 0;
+        overflow: hidden;   
+        max-width: 0;
+        transition: max-height 2s,max-width 1s;
+    }
+    .card-block > div >.card-content.expanded {
+        display: block;
+        font-size: clamp(12px, 3vw, 24px);
+        font-weight: 700;
+        font-style: oblique;
+        opacity: 1;
+        max-height: fit-content; /* Arbitrary large value */
+        max-width: 100%; /* Arbitrary large value */
+        transition: max-height 2s,max-width 1s;
+    }
+    
+
+
+
+    .skills > span{
+        display: block;
+    }
     /* Footer Stuff */
   footer {
     background-color: var(--footer-background);
@@ -208,7 +273,19 @@
     text-align: center;  
     font-size: 1.5rem;
   }  
-  
+  .contact-methods{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    gap: 10%;
+
+  }
+  .contact-methods h1,form{
+    max-width: fit-content;
+    box-shadow: 0 0 4px var(--background); 
+    border: 5px solid #e0e0e0;
+    border-radius: 8px;
+  }
   /* Remove the "type" column below 1000px */  
   @media (max-width: 1000px) {  
     .schedule-table >.sidebar {  
@@ -222,4 +299,6 @@
         'name type desc';  
     }  
   }  
-  
+  a.visited-persistent{
+    color: var(--visited-text);
+  }
